@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MOSAIC: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting">
+  <meta name="keywords" content="Visual Prompting, GPT4V">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MOSAIC: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://kuanfang.github.io">Kuan Fang*</a></span>,
+            <span class="author-block">
+              <a href="https://fangchenliu.github.io">Fangchen Liu*</a></span>,
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Berkeley AI Research, UC Berkeley</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">MOSAIC</span> leverage set of visual marks for open-vocabulary robot manipulation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!--<section class="hero is-light is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-steve">-->
+<!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/steve.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-chair-tp">-->
+<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/chair-tp.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-shiba">-->
+<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/shiba.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-fullbody">-->
+<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/fullbody.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-blueshirt">-->
+<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/blueshirt.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-mask">-->
+<!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/mask.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-coffee">-->
+<!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/coffee.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-toby">-->
+<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/toby2.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The pursuit of open-vocabulary generalization requires robotic systems to perform tasks involving complex
+            and diverse environments and task goals. While the recent advances on vision language models (VLMs) present
+            unprecedented opportunities to solve unseen problems, how to utilize their emergent abilities for robotic systems
+            in the physical world remains an open question.
+          </p>
+          <p>
+            We present MOSAIC, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings.
+            At the heart of our approach is a compact point-based representation of affordance and motion that bridges
+            the VLM's predictions on RGB images and the robot's motions in the physical world.
+          </p>
+          <p>
+            By prompting a VLM pre-trained on internet-scale data, our approach predicts the affordances and generates the corresponding motions
+            by leveraging the concept understanding and commonsense knowledge from broad sources. To scaffold the VLM's reasoning in zero-shot,
+            we propose a visual prompting technique that annotates visual and textual marks on the raw images, converting the prediction
+            of keypoints and waypoints into a visual question answering problem that is feasible for the VLM to solve.
+          </p>
+          <p>
+            We evaluate and analyze MOSAIC's performance across a wide variety of manipulation tasks specified by
+            free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
+            MOSAIC can successfully achieve high success rates on all these tasks in zero-shot or few-shot and
+            provide interpretable intermediate results for human users.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Approach</h2>
+        <div>
+        <img src="./static/images/model.jpg"
+                   class="interpolation-image"
+                   alt="Interpolation end reference image."/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">MOSAIC</span> first queries VLM to generate subtask decomposition. Then it leverages the open-vocabulary
+          segmentation model to get object masks and sample keypoints. For each subtask, we further query VLM to select keypoints
+          and waypoints for the robot to execute.
+      </h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tasks</h2>
+        <div>
+        <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Examples</h2>
+        <div>
+        <img src="./static/images/examples.jpg"
+                   class="interpolation-image"
+                   alt="Interpolation end reference image."/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+        The visual prompt examples that <span class="dnerf">MOSAIC</span> uses for the manipulation tasks we proposed.
+      </h2>
+      </div>
+    </div>
+
+
+    <!-- Paper video. -->
+<!--    TODO: add video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <h2 class="subtitle has-text-centered">
+        For more results and details about <span class="dnerf">MOSAIC</span>, please check the videos.
+      </h2>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!-- TODO: update with arxiv information -->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@article{park2021nerfies,-->
+<!--  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},-->
+<!--  title     = {Nerfies: Deformable Neural Radiance Fields},-->
+<!--  journal   = {ICCV},-->
+<!--  year      = {2021},-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was adapted from nerfie's <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
