@@ -72,7 +72,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>*</sup> denotes equal contribution, alphabetical order</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">Berkeley AI Research, UC Berkeley</span>
@@ -117,7 +117,7 @@
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MOSAIC</span> leverage set of visual marks for open-vocabulary robot manipulation.
+        <span class="dnerf">MOSAIC</span> can harness GPT4-V with visual prompts for open-vocabulary robot manipulation.
       </h2>
     </div>
   </div>
@@ -190,12 +190,6 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The pursuit of open-vocabulary generalization requires robotic systems to perform tasks involving complex
-            and diverse environments and task goals. While the recent advances on vision language models (VLMs) present
-            unprecedented opportunities to solve unseen problems, how to utilize their emergent abilities for robotic systems
-            in the physical world remains an open question.
-          </p>
-          <p>
             We present MOSAIC, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings.
             At the heart of our approach is a compact point-based representation of affordance and motion that bridges
             the VLM's predictions on RGB images and the robot's motions in the physical world.
@@ -225,10 +219,10 @@
                    class="interpolation-image"
                    alt="Interpolation end reference image."/>
         </div>
-        <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MOSAIC</span> first queries VLM to generate subtask decomposition. Then it leverages the open-vocabulary
-          segmentation model to get object masks and sample keypoints. For each subtask, we further query VLM to select keypoints
-          and waypoints for the robot to execute.
+        <h2 class="content has-text-justified">
+        <span class="dnerf">MOSAIC</span> first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
+          Then it leverages the open-vocabulary vision model to extract object keypoints from segmentation masks. For each subtask, we further query VLM to select keypoints
+          and waypoints to perform the desired motion.
       </h2>
       </div>
     </div>
@@ -239,6 +233,9 @@
         <div>
         <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/>
         </div>
+        <h2 class="content has-text-justified">
+        <span class="dnerf">MOSAIC</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
+      </h2>
       </div>
     </div>
 
@@ -250,15 +247,14 @@
                    class="interpolation-image"
                    alt="Interpolation end reference image."/>
         </div>
-        <h2 class="subtitle has-text-centered">
-        The visual prompt examples that <span class="dnerf">MOSAIC</span> uses for the manipulation tasks we proposed.
+        <h2 class="content has-text-centered">The illustration examples of visual prompts, VLM's responses and robot execution results on the evaluation tasks we proposed.
       </h2>
       </div>
     </div>
 
 
     <!-- Paper video. -->
-<!--    TODO: add video -->
+<!--    TODO: replace video -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -266,7 +262,7 @@
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="content has-text-centered">
         For more results and details about <span class="dnerf">MOSAIC</span>, please check the videos.
       </h2>
       </div>
@@ -278,7 +274,7 @@
 
 
 <!--<section class="section" id="BibTeX">-->
-<!-- TODO: update with arxiv information -->
+<!-- TODO: update with arxiv bibtex -->
 <!--  <div class="container is-max-desktop content">-->
 <!--    <h2 class="title">BibTeX</h2>-->
 <!--    <pre><code>@article{park2021nerfies,-->
