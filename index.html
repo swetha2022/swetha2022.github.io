@@ -54,7 +54,7 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-fullhd">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
@@ -84,7 +84,7 @@
 
               <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="voxposer.pdf"
+                <a target="_blank" href="paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -224,7 +224,9 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
 
+  <div class="container is-fullhd">
     <div class="my-block">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
@@ -245,32 +247,156 @@
 
     <div class="my-block">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Tasks</h2>
+        <div class="column is-full-width">
+          <h2 class="title is-3">Point-based Affordance Representations</h2>
           <div>
-            <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/>
+          <img src="./static/images/affordances.png"
+                     class="interpolation-image"
+                     alt="Interpolation end reference image."
+                     width="800px"
+                     />
           </div>
           <h2 class="content has-text-justified">
-          <span class="dnerf">MOKA</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
-        </h2>
+            To bridge the VLM’s predictions on 2D images and the robot’s motion in the physical world, we introduce a point-based affordance representation. Using a set of keypoints and waypoints, we can specify the robot’s motions for a wide range of tasks. 
+          </h2>
         </div>
       </div>
     </div>
 
-    <div class="my-block">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Examples</h2>
-          <div>
-          <img src="./static/images/examples.jpg"
-                     class="interpolation-image"
-                     alt="Interpolation end reference image."/>
+    <!-- <div class="container is-max-widescreen"> -->
+    <div class="container is-fullhd">
+
+      <!-- <div class="rows"> -->
+      <!-- <div class="container is-fullhd"> -->
+      <div class="rows is-fullhd">
+        <!-- <div class="column has-text-centered"> -->
+        <h2 class="title is-3">Tasks</h2>
+        
+        <p class="content has-text-justified">
+          Given free-form descriptions of the tasks, MOKA can effectively predict the point-based affordance representations and generates the desired motions.
+        </p>
+        
+        <div class="rows">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
           </div>
-          <h2 class="content has-text-centered">The illustration examples of visual prompts, VLM's responses and robot execution results on the evaluation tasks we proposed.
-        </h2>
+
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="media/videos/.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:center">
+                ""
+              </p>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
+
+    <!-- <div class="my-block"> -->
+    <!--   <div class="columns is-centered has-text-centered"> -->
+    <!--     <div class="column is-four-fifths"> -->
+    <!--       <h2 class="title is-3">Tasks</h2> -->
+    <!--       <div> -->
+    <!--         <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/> -->
+    <!--       </div> -->
+    <!--       <h2 class="content has-text-justified"> -->
+    <!--       <span class="dnerf">MOKA</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc. -->
+    <!--     </h2> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <!--  -->
+    <!-- <div class="my-block"> -->
+    <!--   <div class="columns is-centered has-text-centered"> -->
+    <!--     <div class="column is-full-width"> -->
+    <!--       <h2 class="title is-3">Examples</h2> -->
+    <!--       <div> -->
+    <!--       <img src="./static/images/examples.jpg" -->
+    <!--                  class="interpolation-image" -->
+    <!--                  alt="Interpolation end reference image."/> -->
+    <!--       </div> -->
+    <!--       <h2 class="content has-text-centered">The illustration examples of visual prompts, VLM's responses and robot execution results on the evaluation tasks we proposed. -->
+    <!--     </h2> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
 
     <!-- Paper video. -->
