@@ -8,6 +8,15 @@ body {
     color: #000;
 }
 
+/* .block a { */
+/*     margin-top: 5px; */
+/*     margin-bottom: 5px; */
+/* } */
+
+.my-block {
+    margin-bottom: 50px;
+}
+
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -21,6 +30,7 @@ body {
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
+  /* padding-bottom: 30px; */
 }
 
 .teaser {
