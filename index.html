@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MOSAIC: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting">
+        content="MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting">
   <meta name="keywords" content="Visual Prompting, GPT4V">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</title>
@@ -57,7 +57,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MOSAIC: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
+          <h1 class="title is-1 publication-title">MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://kuanfang.github.io">Kuan Fang*</a></span>,
@@ -117,7 +117,7 @@
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MOSAIC</span> can harness GPT4-V with visual prompts for open-vocabulary robot manipulation.
+        <span class="dnerf">MOKA</span> can harness GPT4-V with visual prompts for open-vocabulary robot manipulation.
       </h2>
     </div>
   </div>
@@ -190,7 +190,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present MOSAIC, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings.
+            We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings.
             At the heart of our approach is a compact point-based representation of affordance and motion that bridges
             the VLM's predictions on RGB images and the robot's motions in the physical world.
           </p>
@@ -201,9 +201,9 @@
             of keypoints and waypoints into a visual question answering problem that is feasible for the VLM to solve.
           </p>
           <p>
-            We evaluate and analyze MOSAIC's performance across a wide variety of manipulation tasks specified by
+            We evaluate and analyze MOKA's performance across a wide variety of manipulation tasks specified by
             free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
-            MOSAIC can successfully achieve high success rates on all these tasks in zero-shot or few-shot and
+            MOKA can successfully achieve high success rates on all these tasks in zero-shot or few-shot and
             provide interpretable intermediate results for human users.
           </p>
         </div>
@@ -220,7 +220,7 @@
                    alt="Interpolation end reference image."/>
         </div>
         <h2 class="content has-text-justified">
-        <span class="dnerf">MOSAIC</span> first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
+        <span class="dnerf">MOKA</span> first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
           Then it leverages the open-vocabulary vision model to extract object keypoints from segmentation masks. For each subtask, we further query VLM to select keypoints
           and waypoints to perform the desired motion.
       </h2>
@@ -234,7 +234,7 @@
         <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/>
         </div>
         <h2 class="content has-text-justified">
-        <span class="dnerf">MOSAIC</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
+        <span class="dnerf">MOKA</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
       </h2>
       </div>
     </div>
@@ -263,7 +263,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <h2 class="content has-text-centered">
-        For more results and details about <span class="dnerf">MOSAIC</span>, please check the videos.
+        For more results and details about <span class="dnerf">MOKA</span>, please check the videos.
       </h2>
       </div>
     </div>
