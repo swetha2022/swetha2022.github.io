@@ -6,7 +6,7 @@
         content="MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting">
   <meta name="keywords" content="Visual Prompting, GPT4V">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</title>
+  <title>MOKA</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -82,8 +82,19 @@
           <div class="column has-text-centered">
             <div class="publication-links">
 
+              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a target="_blank" href="voxposer.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -93,12 +104,12 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/rail-berkeley/moka"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming soon)</span>
                   </a>
               </span>
             </div>
@@ -190,21 +201,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings.
-            At the heart of our approach is a compact point-based representation of affordance and motion that bridges
-            the VLM's predictions on RGB images and the robot's motions in the physical world.
-          </p>
-          <p>
-            By prompting a VLM pre-trained on internet-scale data, our approach predicts the affordances and generates the corresponding motions
-            by leveraging the concept understanding and commonsense knowledge from broad sources. To scaffold the VLM's reasoning in zero-shot,
-            we propose a visual prompting technique that annotates visual and textual marks on the raw images, converting the prediction
-            of keypoints and waypoints into a visual question answering problem that is feasible for the VLM to solve.
-          </p>
-          <p>
-            We evaluate and analyze MOKA's performance across a wide variety of manipulation tasks specified by
-            free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc.
-            MOKA can successfully achieve high success rates on all these tasks in zero-shot or few-shot and
-            provide interpretable intermediate results for human users.
+          Open-vocabulary generalization requires robotic systems to perform tasks involving complex and diverse envi- ronments and task goals. While the recent advances in vision language models (VLMs) present unprecedented opportunities to solve unseen problems, how to utilize their emergent capabilities to control robots in the physical world remains an open question. In this paper, we present Marking Open-vocabulary Keypoint Affordances(MOKA), an approach that employs VLMs to solve robotic manipulation tasks specified by free-form language de- scriptions. At the heart of our approach is a compact point- based representation of affordance and motion that bridges the VLM’s predictions on RGB images and the robot’s motions in the physical world. By prompting a VLM pre-trained on Internet-scale data, our approach predicts the affordances and generates the corresponding motions by leveraging the concept understanding and commonsense knowledge from broad sources. To scaffold the VLM’s reasoning in zero-shot, we propose a visual prompting technique that annotates marks on the images, converting the prediction of keypoints and waypoints into a series of visual question answering problems that are feasible for the VLM to solve. Using the robot experiences collected in this way, we further investigate ways to bootstrap the performance through in-context learning and policy distillation. We evaluate and analyze MOKA’s performance on a variety of manipulation tasks specified by free-form language descriptions, such as tool use, deformable body manipulation, and object rearrangement.
+          <!--   We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings. -->
+          <!--   At the heart of our approach is a compact point-based representation of affordance and motion that bridges -->
+          <!--   the VLM's predictions on RGB images and the robot's motions in the physical world. -->
+          <!-- [> </p> <] -->
+          <!-- [> <p> <] -->
+          <!--   By prompting a VLM pre-trained on internet-scale data, our approach predicts the affordances and generates the corresponding motions -->
+          <!--   by leveraging the concept understanding and commonsense knowledge from broad sources. To scaffold the VLM's reasoning in zero-shot, -->
+          <!--   we propose a visual prompting technique that annotates visual and textual marks on the raw images, converting the prediction -->
+          <!--   of keypoints and waypoints into a visual question answering problem that is feasible for the VLM to solve. -->
+          <!-- [> </p> <] -->
+          <!-- [> <p> <] -->
+          <!--   We evaluate and analyze MOKA's performance across a wide variety of manipulation tasks specified by -->
+          <!--   free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc. -->
+          <!--   MOKA can successfully achieve high success rates on all these tasks in zero-shot or few-shot and -->
+          <!--   provide interpretable intermediate results for human users. -->
           </p>
         </div>
       </div>
@@ -213,7 +225,7 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Approach</h2>
+        <h2 class="title is-3">MOKA</h2>
         <div>
         <img src="./static/images/model.jpg"
                    class="interpolation-image"
@@ -255,20 +267,21 @@
 
     <!-- Paper video. -->
 <!--    TODO: replace video -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <h2 class="content has-text-centered">
-        For more results and details about <span class="dnerf">MOKA</span>, please check the videos.
-      </h2>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
+  <!--   <div class="columns is-centered has-text-centered"> -->
+  <!--     <div class="column is-four-fifths"> -->
+  <!--       <h2 class="title is-3">Video</h2> -->
+  <!--       <div class="publication-video"> -->
+  <!--         <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" -->
+  <!--                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+  <!--       </div> -->
+  <!--       <h2 class="content has-text-centered"> -->
+  <!--       For more results and details about <span class="dnerf">MOKA</span>, please check the videos. -->
+  <!--     </h2> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!--   [>/ Paper video. <] -->
+  <!-- </div> -->
+
 </section>
 
 
