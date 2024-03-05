@@ -124,11 +124,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png"
+      <img src="./static/images/teaser.gif"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MOKA</span> can harness GPT4-V with visual prompts for open-vocabulary robot manipulation.
+      <h2 class="content has-text-justified">
+        <b>MOKA</b> employs pre-trained vision-language models (GPT-4V) to predict <b>point-based affordance representations</b> for solving open-vocabulary manipulation tasks. By <b>annotating marks</b> (candidate points, grids, and captions) on RGB images, MOKA converts the motion generation problem into a series of visual question-answering problems that the VLM can tackle.
       </h2>
     </div>
   </div>
@@ -237,10 +237,10 @@
                        alt="Interpolation end reference image."/>
           </div>
           <h2 class="content has-text-justified">
-          <span class="dnerf">MOKA</span> first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
+            MOKA first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
             Then it leverages the open-vocabulary vision model to extract object keypoints from segmentation masks. For each subtask, we further query VLM to select keypoints
             and waypoints to perform the desired motion.
-        </h2>
+          </h2>
         </div>
       </div>
     </div>
@@ -249,6 +249,9 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Point-based Affordance Representations</h2>
+          <h2 class="content has-text-justified">
+            To bridge the VLM’s predictions on 2D images and the robot’s motion in the physical world, we introduce a point-based affordance representation. Using a set of keypoints and waypoints, we can specify the robot’s motions for a wide range of tasks. 
+          </h2>
           <div>
           <img src="./static/images/affordances.png"
                      class="interpolation-image"
@@ -256,9 +259,6 @@
                      width="800px"
                      />
           </div>
-          <h2 class="content has-text-justified">
-            To bridge the VLM’s predictions on 2D images and the robot’s motion in the physical world, we introduce a point-based affordance representation. Using a set of keypoints and waypoints, we can specify the robot’s motions for a wide range of tasks. 
-          </h2>
         </div>
       </div>
     </div>
@@ -366,6 +366,24 @@
 
         </div>
 
+      </div>
+    </div>
+
+    <div class="my-block">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Robustness to variances.</h2>
+          <div>
+          <h2 class="content has-text-justified">
+            For the same task, MOKA's prediction is robust to variations of instructions, objects, and initial poses. Each column in the image uses the same language instruction and similar initial arrangements of objects. The two rows involve different objects.
+          </h2>
+          <img src="./static/images/robustness.png"
+                     class="interpolation-image"
+                     alt="Interpolation end reference image."
+                     width="800px"
+                     />
+          </div>
+        </div>
       </div>
     </div>
 
