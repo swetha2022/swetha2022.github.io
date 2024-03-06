@@ -7,6 +7,7 @@
   <meta name="keywords" content="Visual Prompting, GPT4V">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MOKA</title>
+	<link rel="icon" type="image/png" href="images/moka_icon.png"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -54,7 +55,7 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-fullhd">
+    <!-- <div class="container is-fullhd"> -->
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
@@ -121,15 +122,34 @@
   </div>
 </section>
 
+<!-- <section class="hero teaser"> -->
+<!--   <div class="container is-max-desktop"> -->
+<!--     <div class="hero-body"> -->
+<!--       <img src="images/teaser.gif" -->
+<!--                  class="interpolation-image" -->
+<!--                  alt="Interpolation end reference image."/> -->
+<!--       <h2 class="content has-text-justified"> -->
+<!--         <b>MOKA</b> employs pre-trained vision-language models (GPT-4V) to predict <b>point-based affordance representations</b> for solving manipulation tasks in zero- or few-shot manners. By <b>annotating marks</b> (candidate points, grids, and captions) on RGB images, MOKA converts the motion generation problem into a series of visual question-answering problems that the VLM can address. -->
+<!--       </h2> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </section> -->
+
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd">
     <div class="hero-body">
-      <img src="./static/images/teaser.gif"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-      <h2 class="content has-text-justified">
-        <b>MOKA</b> employs pre-trained vision-language models (GPT-4V) to predict <b>point-based affordance representations</b> for solving open-vocabulary manipulation tasks. By <b>annotating marks</b> (candidate points, grids, and captions) on RGB images, MOKA converts the motion generation problem into a series of visual question-answering problems that the VLM can tackle.
-      </h2>
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="70%" width="70%">
+            <source src="videos/teaser.mp4"
+                    type="video/mp4">
+          </video>
+          </br>
+        </div>
+        <h2 class="subtitle has-text-justified">
+        <b>MOKA</b> employs pre-trained vision-language models (GPT-4V) to predict <b>point-based affordance representations</b> for solving manipulation tasks in zero- or few-shot manners. By <b>annotating marks</b> (candidate points, grids, and captions) on RGB images, MOKA converts the motion generation problem into a series of visual question-answering problems that the VLM can address.
+        </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -141,49 +161,49 @@
 <!--      <div id="results-carousel" class="carousel results-carousel">-->
 <!--        <div class="item item-steve">-->
 <!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/steve.mp4"-->
+<!--            <source src="videos/steve.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-chair-tp">-->
 <!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/chair-tp.mp4"-->
+<!--            <source src="videos/chair-tp.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-shiba">-->
 <!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/shiba.mp4"-->
+<!--            <source src="videos/shiba.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-fullbody">-->
 <!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/fullbody.mp4"-->
+<!--            <source src="videos/fullbody.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-blueshirt">-->
 <!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/blueshirt.mp4"-->
+<!--            <source src="videos/blueshirt.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-mask">-->
 <!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/mask.mp4"-->
+<!--            <source src="videos/mask.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-coffee">-->
 <!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/coffee.mp4"-->
+<!--            <source src="videos/coffee.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
 <!--        <div class="item item-toby">-->
 <!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/toby2.mp4"-->
+<!--            <source src="videos/toby2.mp4"-->
 <!--                    type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
@@ -191,6 +211,8 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</section>-->
+
+<hr>
 
 
 <section class="section">
@@ -231,16 +253,23 @@
       <!-- <div class="columns is-centered has-text-centered"> -->
         <div class="column is-full-width">
           <h2 class="title is-3">Marking Open-vocabulary Keypoint Affordances (MOKA)</h2>
+
+          <h2 class="content has-text-justified">
+            MOKA employs VLMs in a <b>hierarchical visual prompting</b> framework, which converts the affordance reasoning problem into a series of visual question problems that are feasible for the VLM to address.
+          </h2>
+
           <div>
-            <img src="./static/images/model.png"
+            <img src="images/model.png"
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
+
           <h2 class="content has-text-justified">
-            MOKA first queries VLM to to decompose a task into multiple one-step subtasks, which are defined by possible involved objects and desired motions.
-            Then it leverages the open-vocabulary vision model to extract object keypoints from segmentation masks. For each subtask, we further query VLM to select keypoints
-            and waypoints to perform the desired motion.
+						On the <b>high level</b>, the VLM is prompted to decompose the free-form language description of the task into a sequence of subtasks and summarize the subtask information. 
+						<!-- </br> -->
+						On the <b>low level</b>, the VLM produces the point-based affordance representation based on the marked image. 
           </h2>
+
         <!-- </div> -->
       </div>
     </div>
@@ -253,7 +282,7 @@
             To bridge the VLM’s predictions on 2D images and the robot’s motion in the physical world, we introduce a point-based affordance representation. Using a set of keypoints and waypoints, we can specify the robot’s motions for a wide range of tasks. 
           </h2>
           <div>
-          <img src="./static/images/affordances.png"
+          <img src="images/affordances.png"
                      class="interpolation-image"
                      alt="Interpolation end reference image."
                      />
@@ -263,7 +292,8 @@
     </div>
 
     <!-- <div class="container is-max-widescreen"> -->
-    <div class="container is-fullhd">
+    <div class="my-block">
+    <!-- <div class="container is-fullhd"> -->
 
       <!-- <div class="rows"> -->
       <!-- <div class="container is-fullhd"> -->
@@ -277,30 +307,36 @@
         
         <div class="rows">
           <div class="columns">
-            <div class="column has-text-centered">
+            <div class="column has-text-justified">
               <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_0_0.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Move the eyeglasses onto the yellow cloth and use the brush to sweep the snack package to the right side of the table."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 1)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_1_0.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Use the ultrasound cleaner to clean the metal watch. The unstrasound cleaner has no lid and can be turned on by pressing the red button."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 1)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_a0.mp4" type="video/mp4">
               </video>
-              <p style="text-align:center">
-                ""
+              <p style="text-align:left">
+                "Close the drawer."
               </p>
             </div>
           </div>
@@ -308,28 +344,70 @@
           <div class="columns">
             <div class="column has-text-centered">
               <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_0_1.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Move the eyeglasses onto the yellow cloth and use the brush to sweep the snack package to the right side of the table."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 2)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_1_1.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Use the ultrasound cleaner to clean the metal watch. The unstrasound cleaner has no lid and can be turned on by pressing the red button."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 2)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_a1.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Insert the pink roses into the vase."
+              </p>
+            </div>
+          </div>
+
+        <div class="rows">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="videos/moka_task_2_0.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:left">
+                "Make a gift box containing the perfurme bottle. Make sure to put some golden filler beneath the perfume."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 1)
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="videos/moka_task_3_0.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:left">
+                "Unplug the charge cable and close the lid of the laptop."
+              </p>
+              <p style="text-align:center">
+								(Subtask 1)
+              </p>
+            </div>
+        
+            <div class="column has-text-centered">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
+                <source src="videos/moka_task_a2.mp4" type="video/mp4">
+              </video>
+              <p style="text-align:left">
+                "Use the fur remover to remove the white fur ball on the sweater."
               </p>
             </div>
           </div>
@@ -337,28 +415,34 @@
           <div class="columns">
             <div class="column has-text-centered">
               <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_2_1.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Make a gift box containing the perfurme bottle. Make sure to put some golden filler beneath the perfume."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 2)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_3_1.mp4" type="video/mp4">
               </video>
+              <p style="text-align:left">
+                "Unplug the charge cable and close the lid of the laptop."
+              </p>
               <p style="text-align:center">
-                ""
+								(Subtask 2)
               </p>
             </div>
         
             <div class="column has-text-centered">
               <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="media/videos/.mp4" type="video/mp4">
+                <source src="videos/moka_task_a3.mp4" type="video/mp4">
               </video>
-              <p style="text-align:center">
-                ""
+              <p style="text-align:left">
+                "Put the scissors in the hand."
               </p>
             </div>
           </div>
@@ -369,21 +453,21 @@
     </div>
 
     <div class="my-block">
-      <!-- <div class="columns is-centered has-text-centered"> -->
         <div class="column is-full-width">
           <h2 class="title is-3">Robustness Analysis</h2>
           <div>
           <h2 class="content has-text-justified">
             For the same task, MOKA's prediction is robust to variations of instructions, objects, and initial poses. Each column in the image uses the same language instruction and similar initial arrangements of objects. The two rows involve different objects.
           </h2>
-          <img src="./static/images/robustness.png"
-                     class="interpolation-image"
-                     alt="Interpolation end reference image."
-                     width="800px"
-                     />
-          </div>
-        </div>
-      <!-- </div> -->
+					<div class="columns is-centered has-text-centered">
+						<img src="images/robustness.png"
+											 class="interpolation-image"
+											 alt="Interpolation end reference image."
+											 width="800px"
+											 />
+						</div>
+					</div>
+			</div>
     </div>
 
     <!-- <div class="my-block"> -->
@@ -391,7 +475,7 @@
     <!--     <div class="column is-four-fifths"> -->
     <!--       <h2 class="title is-3">Tasks</h2> -->
     <!--       <div> -->
-    <!--         <img src="./static/images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/> -->
+    <!--         <img src="images/tasks.png" class="interpolation-image" alt="Interpolation end reference image."/> -->
     <!--       </div> -->
     <!--       <h2 class="content has-text-justified"> -->
     <!--       <span class="dnerf">MOKA</span> is evaluated on a wide variety of manipulation tasks specified by free-form language descriptions, spanning across tool use, deformable body manipulation, object rearrangement, etc. -->
@@ -405,7 +489,7 @@
     <!--     <div class="column is-full-width"> -->
     <!--       <h2 class="title is-3">Examples</h2> -->
     <!--       <div> -->
-    <!--       <img src="./static/images/examples.jpg" -->
+    <!--       <img src="images/examples.jpg" -->
     <!--                  class="interpolation-image" -->
     <!--                  alt="Interpolation end reference image."/> -->
     <!--       </div> -->
