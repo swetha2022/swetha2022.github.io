@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting">
-  <meta name="keywords" content="Visual Prompting, GPT4V">
+        content="KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data">
+  <meta name="keywords" content="Vision-Language Model, Data Synthesis, Fine-Tuning, Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MOKA</title>
+  <title>KALIE</title>
 	<link rel="icon" type="image/png" href="images/moka_icon.png"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,17 +58,20 @@
     <!-- <div class="container is-fullhd"> -->
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MOKA: Open-Vocabulary Robotic Manipulation through Mark-Based Visual Prompting</h1>
+          <h1 class="title is-1 publication-title">KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://kuanfang.github.io">Kuan Fang*</a></span>,
+              <a>Grace Tang*</a></span>,
             <span class="author-block">
-              <a href="https://fangchenliu.github.io">Fangchen Liu*</a></span>,
+              <a>Swetha Rajkumar*</a></span>,
             <span class="author-block">
-              <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>,
+              <a href="https://yifeizhou02.github.io">Yifei Zhou</a>,
             </span>
             <span class="author-block">
               <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+            </span>
+            <span class="author-block">
+              <a href="https://kuanfang.github.io">Kuan Fang</a>
             </span>
           </div>
 
@@ -224,8 +227,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-            Open-vocabulary generalization requires robotic systems to perform tasks involving complex and diverse envi- ronments and task goals. While the recent advances in vision language models (VLMs) present unprecedented opportunities to solve unseen problems, how to utilize their emergent capabilities to control robots in the physical world remains an open question. In this paper, we present Marking Open-vocabulary Keypoint Affordances (MOKA), an approach that employs VLMs to solve robotic manipulation tasks specified by free-form language de- scriptions. At the heart of our approach is a compact point- based representation of affordance and motion that bridges the VLM’s predictions on RGB images and the robot’s motions in the physical world. By prompting a VLM pre-trained on Internet-scale data, our approach predicts the affordances and generates the corresponding motions by leveraging the concept understanding and commonsense knowledge from broad sources. To scaffold the VLM’s reasoning in zero-shot, we propose a visual prompting technique that annotates marks on the images, converting the prediction of keypoints and waypoints into a series of visual question answering problems that are feasible for the VLM to solve. Using the robot experiences collected in this way, we further investigate ways to bootstrap the performance through in-context learning and policy distillation. We evaluate and analyze MOKA’s performance on a variety of manipulation tasks specified by free-form language descriptions, such as tool use, deformable body manipulation, and object rearrangement.
-            <!--   We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings. -->
+              Building generalist robotic systems involves effectively endowing robots the capabilities to handle novel objects in an open-world setting. Inspired by the advances of large pre-trained models, we propose Keypoint Affordance Learning from Imagined Environments (KALIE), which adapts pre-trained Vision Language Models (VLMs) for robotic control in a scalable manner. Instead of directly producing motor commands, KALIEcontrols the robot by predicting point-based affordance representations based on natural language instructions and visual observations of the scene. The VLM is trained on 2D images with affordances labeled by humans, bypassing the need for training data collected on robotic systems. Through an affordance-aware data synthesis pipeline, KALIE automatically creates massive high-quality training data based on limited example data manually collected by humans. We demonstrate that KALIE can learn to robustly solve new manipulation tasks with unseen objects given only 50 example data points. Compared to baselines using pre-trained VLMs, our approach consistently achieves superior performance.            <!--   We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings. -->
             <!--   At the heart of our approach is a compact point-based representation of affordance and motion that bridges -->
             <!--   the VLM's predictions on RGB images and the robot's motions in the physical world. -->
             <!-- [> </p> <] -->
